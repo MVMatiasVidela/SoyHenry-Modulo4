@@ -1,0 +1,38 @@
+
+.heart-shape {
+  position: relative;
+  width: 20px; /* Reducir el ancho */
+  height: 20px; /* Reducir la altura */
+  background-color: red;
+  transform: rotate(-45deg);
+  margin: 10px; /* Añadir un pequeño margen para separar los corazones */
+}
+
+.heart-shape::before,
+.heart-shape::after {
+  content: "";
+  position: absolute;
+  width: 20px; /* Reducir el ancho */
+  height: 20px; /* Reducir la altura */
+  border-radius: 50%;
+  background-color: red;
+}
+
+.heart-shape::before {
+  top: -10px; /* Ajustar la posición vertical */
+  left: 0;
+}
+
+.heart-shape::after {
+  top: 0;
+  left: 10px; /* Ajustar la posición horizontal */
+}
+
+.heart-shape:hover {
+  background-color: red;
+  transform: rotate(-45deg) scale(1.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+
+
